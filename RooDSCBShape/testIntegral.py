@@ -7,15 +7,18 @@ r.gSystem.Load('RooDSCBShapeOld_cxx')
 
 w = r.RooWorkspace()
 
-# w.factory('x[-10,-2]') # ok
+#w.factory('x[-10,-2]') # ok
 # w.factory('x[2,10]')   # ok
 # w.factory('x[-2,2]')     # ok
-w.factory('x[-4,7]')
+#w.factory('x[-4,7]')
+#w.factory('x[-5,-2]') # ok
 
+#w.factory('x[-10,-1]') # ok
+w.factory('x[-1.9,-1]') # ok
 
 dscb_str = '''(x,
-  #mu[3],
-  #sigma[3],
+  #mu[0],
+  #sigma[1],
   #alpha1[2], n1[2],
   #alpha2[2], n2[2]
   )'''

@@ -20,6 +20,8 @@
 #include <math.h>
 #include "TMath.h"
 
+#include<iostream>
+
 ClassImp(RooDSCBShape)
 
 RooDSCBShape::RooDSCBShape(const char *name, const char *title,
@@ -90,6 +92,9 @@ RooDSCBShape::RooDSCBShape(const char *name, const char *title,
     integral += IntGaus(TMath::Max(umin, -TMath::Abs(a1)), TMath::Min(umax, TMath::Abs(a2)));
     integral += IntPwLw(TMath::Max(umin, TMath::Abs(a2)), TMath::Max(umax, TMath::Abs(a2)), a2, n1);
 
+    std::cout<<"I1 = "<<IntPwLw(TMath::Max(-umax, TMath::Abs(a1)), TMath::Max(-umin, TMath::Abs(a1)), a1, n1)<<std::endl;
+    std::cout<<"I2 = "<<IntGaus(TMath::Max(umin, -TMath::Abs(a1)), TMath::Min(umax, TMath::Abs(a2)))<<std::endl;
+
     return sig * integral;
   }
 
@@ -107,7 +112,7 @@ RooDSCBShape::RooDSCBShape(const char *name, const char *title,
     }
     else //They are at the same side of zero
     {
-      return rootPiBy2 * ( TMath::Erf(TMath::Abs(x1) / TMath::Sqrt2()) - TMath::Erf(TMath::Abs(x0) / TMath::Sqrt2()) );
+      return rootPiBy2 * TMath::Abs( TMath::Erf(TMath::Abs(x1) / TMath::Sqrt2()) - TMath::Erf(TMath::Abs(x0) / TMath::Sqrt2()) );
     }
 
   }
