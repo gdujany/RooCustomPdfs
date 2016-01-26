@@ -6,7 +6,11 @@
 * Code massaged by Giulio Dujany - University of Manchester                 *
 *****************************************************************************/
 
-// Your description goes here...
+// Double sided crystal ball
+// mu and sig are the parameters of the gaussians
+// a1, n1 the parameters of the left power law tail
+// a2, n2 the parameters of the right power law tail
+// a1, a2 >= 0; n1, n2 >= 1
 
 #include "Riostream.h"
 
