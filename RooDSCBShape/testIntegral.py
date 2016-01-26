@@ -19,8 +19,8 @@ w.factory('x[-10,-1]') # ok
 dscb_str = '''(x,
   #mu[0],
   #sigma[1],
-  #alpha1[2], n1[2],
-  #alpha2[2], n2[2]
+  #alpha1[2], n1[1],
+  #alpha2[2], n2[1]
   )'''
 
 w.factory('RooDSCBShape::analitic'+dscb_str)

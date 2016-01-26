@@ -127,7 +127,7 @@ RooDSCBShape::RooDSCBShape(const char *name, const char *title,
     double result = 0.;
     if(useLog)
     {
-      result = A * ( TMath::Log(B - x1) - TMath::Log(B - x0));
+      result = A * ( TMath::Log(B + x1) - TMath::Log(B + x0));
     }
     else
     {
