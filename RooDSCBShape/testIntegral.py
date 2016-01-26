@@ -2,7 +2,7 @@
 
 import ROOT as r
 
-r.gSystem.Load('RooDSCBShape_cxx')
+r.gSystem.Load('../RooDSCBShape_cxx')
 r.gSystem.Load('RooDSCBShapeOld_cxx')
 
 w = r.RooWorkspace()
@@ -12,9 +12,8 @@ w = r.RooWorkspace()
 # w.factory('x[-2,2]')     # ok
 #w.factory('x[-4,7]')
 #w.factory('x[-5,-2]') # ok
-
-#w.factory('x[-10,-1]') # ok
-w.factory('x[-1.9,-1]') # ok
+w.factory('x[-10,-1]') # ok
+#w.factory('x[-1.9,-1]') # ok
 
 dscb_str = '''(x,
   #mu[0],
