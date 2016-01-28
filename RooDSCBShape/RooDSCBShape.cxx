@@ -90,7 +90,7 @@ RooDSCBShape::RooDSCBShape(const char *name, const char *title,
 
     integral += IntPwLw(TMath::Max(-umax, TMath::Abs(a1)), TMath::Max(-umin, TMath::Abs(a1)), a1, n1);
     integral += IntGaus(TMath::Max(umin, -TMath::Abs(a1)), TMath::Min(umax, TMath::Abs(a2)));
-    integral += IntPwLw(TMath::Max(umin, TMath::Abs(a2)), TMath::Max(umax, TMath::Abs(a2)), a2, n1);
+    integral += IntPwLw(TMath::Max(umin, TMath::Abs(a2)), TMath::Max(umax, TMath::Abs(a2)), a2, n2);
 
 
     std::cout<<"I1 = "<<IntPwLw(TMath::Max(-umax, TMath::Abs(a1)), TMath::Max(-umin, TMath::Abs(a1)), a1, n1)<<std::endl;
